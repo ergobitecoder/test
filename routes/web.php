@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\WalletController;
-use App\Http\Controllers\BuyController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/user/wallet', [WalletController::class, 'deposit'])->middleware('api-key');
 
-Route::post('/user/buy', [BuyController::class, 'buy'])->middleware('api-key');
 
