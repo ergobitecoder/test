@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+ 
 Route::post('/user/wallet', [WalletController::class, 'deposit'])->middleware('api-key');
 
 Route::post('/user/buy', [BuyController::class, 'buy'])->middleware('api-key');
